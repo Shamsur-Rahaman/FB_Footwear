@@ -915,19 +915,19 @@ html{
 .service:nth-child(1) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #1259dd;
 }
 .service:nth-child(2) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #fa751c;
 }
 .service:nth-child(3) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #3293ff;
 }
 .service:nth-child(4) h3{
@@ -963,7 +963,7 @@ html{
 .service:nth-child(9) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.6rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     color: #f600e4;
 }
 .service p{
