@@ -1,0 +1,14 @@
+###########################################
+git init
+git add .
+git commit -m "multipage first commit"
+git branch -M main
+git remote add origin https://github.com/Shamsur-Rahaman/FB_Footwear.git
+git push -u origin main
+##########################################
+
+##########################################
+git add .
+git commit -m "multipage second commit"
+git push
+##########################################
