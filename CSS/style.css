@@ -31,6 +31,11 @@ html{
     align-items: center;
     padding: 1.5rem;
 }
+.navbar.sticky{
+    height: 8rem;
+    background: #fff;
+    box-shadow: 0 1rem 10rem rgba(130,162,235,.6);
+}
 .logo{
     display: flex;
     flex-direction: column;
@@ -38,6 +43,7 @@ html{
 .logo span{
     text-shadow: 0 1rem 3rem rgba(0, 0, 0, .3);
 }
+
 .logo span:nth-child(1){
     font-family: "Mooli",cursive;
     color: white;
@@ -60,6 +66,10 @@ html{
     text-align: right;
     transform: translate(-.9rem,-1rem);
     letter-spacing: .1rem;
+}
+.sticky .logo span{
+    color:#0c3f41;
+    text-shadow: none;
 }
 .nav-items{
     width: 50%;
@@ -87,8 +97,19 @@ html{
     opacity: 1;
     visibility: visible;
 }
+.sticky .nav-item::after{
+    top: 5rem;
+}
 .nav-link{
     color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+.sticky .nav-link{
+    color: #13686b;
     font-weight: bold;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -110,6 +131,10 @@ html{
 .nav-item:hover .dropdown{
     opacity: 1;
     visibility: visible;
+}
+.sticky .dropdown{
+    top: 8rem;
+    box-shadow: 0 1rem 10rem rgba(130,162,235,.4);
 }
 .dropdown-1{
     left: -24rem;
@@ -817,11 +842,12 @@ html{
     width: 100%;
     height: 170vh;
     position: relative;
+    margin-top: 15rem;
+    margin-bottom: 20rem;
 }
 .service-wrapper{
-    width: 70%;
+    width: 65%;
     background: #fff;
-    position: absolute;
     box-shadow: 0 2rem 5rem rgba(134,152,167,.5);
     top: 50%;
     left: 50%;
@@ -831,6 +857,8 @@ html{
     flex-direction: column;
     padding: 6rem 0;
     border-radius: 1rem;
+    position: absolute;
+    z-index: 3;
 }
 .service-wrapper h2{
     font-family: "Mooli",cursive;
@@ -855,6 +883,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 1.5rem;
 }
 .service i{
     width: 6rem;
@@ -933,37 +962,37 @@ html{
 .service:nth-child(4) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #31dea1;
 }
 .service:nth-child(5) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #4400ab;
 }
 .service:nth-child(6) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #ff4800;
 }
 .service:nth-child(7) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #ff26ac;
 }
 .service:nth-child(8) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #00d1ea;
 }
 .service:nth-child(9) h3{
     font-family: "Croissant one", cursive;
     font-size: 1.6rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: #f600e4;
 }
 .service p{
@@ -973,12 +1002,34 @@ html{
     text-align: center;
     color: #889cb9;
 }
+.services-bg-1{
+    width: 60rem;
+    height: 60rem;
+    background: linear-gradient(to right, transparent, transparent, #ff43a7);
+    right: 8%;
+    top: -12%;
+    position: absolute;
+    border-radius: 50%;
+    opacity: .5;
+}
+.services-bg-2{
+    width: 60rem;
+    height: 60rem;
+    background: linear-gradient(to left, transparent, transparent, #74b5ff);
+    left: 8%;
+    bottom: -10%;
+    position: absolute;
+    border-radius: 15rem;
+    opacity: .5;
+    transform: rotateZ(-10deg);
+}
 /* Service Section End */
 /* Header Start */
 header{
     width: 100%;
     height: 100vh;
     position: relative;
+    margin-bottom: 6rem;
 }
 /* Header End */
 
