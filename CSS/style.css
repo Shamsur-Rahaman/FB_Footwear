@@ -1147,21 +1147,21 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
 }
 .projects h1{
     font-family: "Mooli", cursive;
     font-size: 4.5rem;
     color: #ff4800;
     /* color: #40c77e; */
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 .projects p{
     font-size: 1.2rem;
     color: #5e728f;
     text-align: center;
     width: 60rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 .filter-nav{
     width: 80%;
@@ -1171,13 +1171,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 .filter-nav-link{
     width: 13rem;
     height: 4rem;
     background: #f2f4f5;
-    border-radius: 1rem;
+    border-radius: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1200,6 +1200,50 @@ header{
 }
 .active:hover{
     background: #40c77e;
+}
+.projects-list{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+.project{
+    height: 33rem;
+    width: 33rem;
+    position: relative;
+    margin: 3rem;
+    cursor: pointer;
+}
+.project img{
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    border-radius: 1rem;
+}
+.project img:nth-child(1){
+    width: 22rem;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, .4);
+    z-index: 2;
+}
+.project img:nth-child(2){
+    width: 20rem;
+    height: 30rem;
+    left: -5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0 3rem 8rem rgba(130,162,235,.9);
+}
+.project img:nth-child(3){
+    width: 100%;
+    height: 70%;
+    right: -10%;
+    transform: translateY(-50%);
+    box-shadow: 0 3rem 8rem rgba(130,162,235,.49;
 }
 /* Project Section End */
 /* Container End */
