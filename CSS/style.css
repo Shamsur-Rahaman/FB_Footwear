@@ -75,12 +75,13 @@ html{
     width: 50%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 .nav-item{
     list-style: none;
     position: relative;
 }
-.nav-item::after{
+.nav-item:not(:last-child)::after{
     content:"";
     position: absolute;
     top: 1.5rem;
@@ -836,7 +837,120 @@ html{
   
 }
 /* Dropdown-6 End */
+/* Dropdown-7 Start */
+.nav-btn{
+    width: 10rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 3rem;  
+    background: #fff;
+    color: #e78f74;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .4);
+}
+.nav-btn:hover{
+    transform: scale(1.10);
+}
+.sticky .nav-btn{
+    box-shadow: none;
+    color: #fff;
+    background: linear-gradient(to right, #ff4569, #ff3598);
+}
+/* Dropdown-7 End */
 /* Navigation End */
+/* Header Start */
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 6rem;
+}
+/* Header End */
+
+/* Banner Start */
+.banner{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    z-index: 3;
+}
+.banner h1{
+    font-size: 5rem;
+    color: white;
+    font-family: "Mooli", cursive;
+    text-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+}
+.banner h3{
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: "Mooli", cursive;
+    text-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+    margin: 0 0 3rem 1rem;
+}
+.banner button{
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 400;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+    background: linear-gradient(to right, #aa3fac, #8430ea);
+    color: white;
+}
+.banner button:hover{
+    transform: translateY(-.2rem);
+}
+/* Banner End */
+/* Backgrounds Start */
+.backgrounds div{
+    position: absolute;
+}
+.bg-main{
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(to left, transparent, #4408c5, #4408ab);
+    top: -95%;
+    left: -10%;
+    transform: rotateZ(-15deg) skewX(30deg);
+    border-radius: 0 0 0 10rem;
+    opacity: .9;
+    z-index: 1;
+}
+.bg-1{
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(transparent 60%, #ff26ac, #f724db);
+    top: -40%;
+    right: -10%;
+    transform: rotateZ(-15deg) skewX(30deg);
+    border-radius: 0 0 0 5rem;
+}
+.bg-2{
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(transparent 60%, #cd5995, #fe945a);
+    top: -60%;
+    right: 10%;
+    transform: rotateZ(-15deg) skewX(30deg);
+    border-radius: 0 0 0 5rem;
+    z-index: 2;
+    opacity: .4;
+    box-shadow: 7rem 4rem 6rem rgba(0, 0, 0, .9);
+}
+/* Backgrounds End */
 /* Service Section Start */
 .services{
     width: 100%;
@@ -1024,90 +1138,68 @@ html{
     transform: rotateZ(-10deg);
 }
 /* Service Section End */
-/* Header Start */
-header{
+/* Project Section Start */
+.projects{
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    position: relative;
-    margin-bottom: 6rem;
-}
-/* Header End */
+    padding: 10rem 0 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-/* Banner Start */
-.banner{
-    position: absolute;
-    top: 18%;
-    left: 20%;
-    z-index: 3;
 }
-.banner h1{
-    font-size: 5rem;
-    color: white;
+.projects h1{
     font-family: "Mooli", cursive;
-    text-shadow: 0 1rem 3rem rgba(0,0,0,.1);
+    font-size: 4.5rem;
+    color: #ff4800;
+    /* color: #40c77e; */
+    margin-bottom: 3rem;
 }
-.banner h3{
-    font-size: 1.6rem;
-    color: white;
+.projects p{
+    font-size: 1.2rem;
+    color: #5e728f;
+    text-align: center;
+    width: 60rem;
+    margin-bottom: 3rem;
+}
+.filter-nav{
+    width: 80%;
+    height: 6.5rem;
+    box-shadow: 0 1rem 3rem rgba(12, 12, 12, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+.filter-nav-link{
+    width: 13rem;
+    height: 4rem;
+    background: #f2f4f5;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    font-family: "Mooli", cursive;
-    text-shadow: 0 1rem 3rem rgba(0,0,0,.1);
-    margin: 0 0 3rem 1rem;
+    color: rgb(64, 199, 64);
+    font-weight: bolder;
+    font-size: 1.15rem;
+    transition: all .3s;
 }
-.banner button{
-    width: 10rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 1.5rem;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: 400;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
-    cursor: pointer;
-    background: linear-gradient(to right, #aa3fac, #8430ea);
+.filter-nav-link:hover{
+    background: #40c77e;
+    color: white;
+    transform: scale(1.05);
+    
+}
+.active{
+    background: #40c77e;
     color: white;
 }
-.banner button:hover{
-    transform: translateY(-.2rem);
+.active:hover{
+    background: #40c77e;
 }
-/* Banner End */
-/* Backgrounds Start */
-.backgrounds div{
-    position: absolute;
-}
-.bg-main{
-    width: 150%;
-    height: 150%;
-    background: linear-gradient(to left, transparent, #4408c5, #4408ab);
-    top: -95%;
-    left: -10%;
-    transform: rotateZ(-15deg) skewX(30deg);
-    border-radius: 0 0 0 10rem;
-    opacity: .9;
-    z-index: 1;
-}
-.bg-1{
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(transparent 60%, #ff26ac, #f724db);
-    top: -40%;
-    right: -10%;
-    transform: rotateZ(-15deg) skewX(30deg);
-    border-radius: 0 0 0 5rem;
-}
-.bg-2{
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(transparent 60%, #cd5995, #fe945a);
-    top: -60%;
-    right: 10%;
-    transform: rotateZ(-15deg) skewX(30deg);
-    border-radius: 0 0 0 5rem;
-    z-index: 2;
-    opacity: .4;
-    box-shadow: 7rem 4rem 6rem rgba(0, 0, 0, .9);
-}
-/* Backgrounds End */
-/**/
+/* Project Section End */
+/* Container End */
